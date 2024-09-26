@@ -3,6 +3,7 @@ package com.wo.gmnt.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+
 @Data
 @Entity
 @Table(name = "gms_equip")

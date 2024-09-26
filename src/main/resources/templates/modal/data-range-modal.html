@@ -1,0 +1,53 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Modal Date Range -->
+    <div th:fragment="dataRangeModal" class="modal fade" id="dateRangeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h1 class="modal-title fs-5">Periodo de Fechas</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="mb-3 row">
+                            <label for="areaCode2" class="col-sm-3 form-label">Código: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="areaCode2" placeholder="Código"
+                                           value="0101001" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="areaName2" class="col-sm-3 form-label">Área: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="areaName2" placeholder="Área"
+                                           value="Laboratorio" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <div class="col-auto d-flex align-items-center mb-2">
+                                <label class="me-2">Desde:</label>
+                                <input type="date" class="form-control" style="width: auto;">
+                            </div>
+                            <div class="col-auto d-flex align-items-center mb-2">
+                                <label class="me-2">Hasta:</label>
+                                <input type="date" class="form-control" style="width: auto;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

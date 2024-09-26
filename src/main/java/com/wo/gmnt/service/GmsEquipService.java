@@ -1,6 +1,5 @@
 package com.wo.gmnt.service;
 
-
 import com.wo.gmnt.model.GmsEquip;
 
 import java.util.List;
@@ -13,7 +12,7 @@ public interface GmsEquipService {
 
     GmsEquip save(GmsEquip equip);
 
-    Boolean deleteById(String idEqp);
+    void deleteById(String idEqp);
 /*
     GmsEquip createEquipment(GmsEquip equip);
 

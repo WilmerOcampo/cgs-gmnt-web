@@ -1,4 +1,4 @@
-package com.wo.gmnt.Model;
+package com.wo.gmnt.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "gms_prop")
-public class Gmsprop {
+public class GmsProp {
     @Id
     @Column(name = "id_pro")
     private String idPro;

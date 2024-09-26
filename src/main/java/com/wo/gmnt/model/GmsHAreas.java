@@ -1,4 +1,4 @@
-package com.wo.gmnt.Model;
+package com.wo.gmnt.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "gms_hareas")
-public class GmsHareas {
+public class GmsHAreas {
     @Id
     @Column(name = "id_har")
     private String idHar;
@@ -17,7 +17,7 @@ public class GmsHareas {
 
     @ManyToOne
     @JoinColumn(name = "id_are")
-    private Gmsarea gmsArea;
+    private GmsArea gmsArea;
 
     @Column(name = "codeqp")
     private String codeqp;

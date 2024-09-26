@@ -1,4 +1,4 @@
-package com.wo.gmnt.Model;
+package com.wo.gmnt.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -25,11 +25,11 @@ public class GmsEquip {
 
     @ManyToOne
     @JoinColumn(name = "id_pro")
-    private Gmsprop gmsProp;
+    private GmsProp gmsProp;
 
     @ManyToOne
     @JoinColumn(name = "id_are")
-    private Gmsarea gmsArea;
+    private GmsArea gmsArea;
 
     @Column(name = "nomeqp")
     private String nomeqp;

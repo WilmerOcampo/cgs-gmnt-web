@@ -20,7 +20,7 @@ public class GmsHProp {
 
     @ManyToOne
     @JoinColumn(name = "id_pro")
-    private com.wo.gmnt.Model.GmsProp gmsProp;
+    private GmsProp gmsProp;
 
     @Column(name = "numitm")
     private String numitm;

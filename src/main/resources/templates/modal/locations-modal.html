@@ -1,0 +1,61 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Modal Locations -->
+    <div th:fragment="locationsModal" class="modal fade" id="locationsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h1 class="modal-title fs-5">Ubigeos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-md-row justify-content-end align-items-center mb-3">
+                        <div class="d-flex align-items-center">
+                            <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                                   style="width: auto;">
+                            <button class="search-btn btn">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered equipment-table mt-3">
+                            <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Distrito</th>
+                                <th>Provincia</th>
+                                <th>Departamento</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>012056</td>
+                                <td>Juan Luis Bustamante y Rivero</td>
+                                <td>Arequipa</td>
+                                <td>Arequipa</td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-check-circle bx-md"></i>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2">
+                        <a class="page-item" href="#">Anterior</a>
+                        <a class="page-item page-item-active" href="#">1</a>
+                        <a class="page-item" href="#">2</a>
+                        <a class="page-item" href="#">3</a>
+                        <a class="page-item" href="#">Siguiente</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

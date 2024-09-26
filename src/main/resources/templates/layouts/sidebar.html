@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+</head>
+<body>
+
+<nav th:fragment="sidebar" class="sidebar">
+    <div class="menu_content">
+        <div class="menu_items">
+
+            <div class="user-info">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Profile">
+                </div>
+                <span>Wilmer Ocampo</span>
+                <span><strong>ADMIN</strong></span>
+            </div>
+
+            <div class="nav_link submenu_item">
+                <span class="navlink">Gestión de Equipos</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <div class="menu_items submenu">
+                <a href="#" class="nav_link sublink">Equipos</a>
+                <a href="#" class="nav_link sublink">Clasificación de Equipos</a>
+                <a href="#" class="nav_link sublink">Clasificación de Equipos</a>
+                <a href="#" class="nav_link sublink">Propietarios</a>
+                <a href="#" class="nav_link sublink">Áreas</a>
+                <a href="#" class="nav_link sublink">Marcas</a>
+            </div>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Recursos Disponibles</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Programa de Mantenimiento</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Workflow de Mantenimiento</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Gestión de Indicadores</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Control de Repuestos</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Configuración</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Seguridad</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Salir</span>
+            </a>
+        </div>
+
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+            <div class="bottom expand_sidebar">
+                <span> Mostrar</span>
+                <i class='bx bx-log-in'></i>
+            </div>
+            <div class="bottom collapse_sidebar">
+                <span> Ocultar</span>
+                <i class='bx bx-log-out'></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipo</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/boxicons-2.1.4/css/boxicons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tables.css">
+</head>
+<body>
+
+
+<!-- navbar -->
+<nav class="navbar">
+    <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <a class="text-decoration-none" href="home.html">CGS Consultores</a>
+    </div>
+
+    <div class="navbar_content">
+        <span>Wilmer Ocampo</span>
+        <img src="images/profile.jpg" alt="" class="profile"/>
+
+    </div>
+</nav>
+
+<!-- sidebar -->
+<nav class="sidebar">
+    <div class="menu_content">
+        <div class="menu_items">
+
+            <div class="user-info">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Profile">
+                </div>
+                <span>Wilmer Ocampo</span>
+                <span><strong>ADMIN</strong></span>
+            </div>
+
+            <div class="nav_link submenu_item">
+                <span class="navlink">Gestión de Equipos</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <div class="menu_items submenu">
+                <a href="#" class="nav_link sublink">Equipos</a>
+                <a href="#" class="nav_link sublink">Clasificación de Equipos</a>
+                <a href="#" class="nav_link sublink">Clasificación de Equipos</a>
+                <a href="#" class="nav_link sublink">Propietarios</a>
+                <a href="#" class="nav_link sublink">Áreas</a>
+                <a href="#" class="nav_link sublink">Marcas</a>
+            </div>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Recursos Disponibles</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Programa de Mantenimiento</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Workflow de Mantenimiento</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Gestión de Indicadores</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Control de Repuestos</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Configuración</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Seguridad</span>
+            </a>
+
+            <a href="#" class="nav_link">
+                <span class="navlink">Salir</span>
+            </a>
+        </div>
+
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+            <div class="bottom expand_sidebar">
+                <span> Mostrar</span>
+                <i class='bx bx-log-in'></i>
+            </div>
+            <div class="bottom collapse_sidebar">
+                <span> Ocultar</span>
+                <i class='bx bx-log-out'></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Content Wrapper -->
+
+<main class="main-content">
+    <div class="breadcrumb">HOME / GESTIÓN DE EQUIPOS / EQUIPO</div>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Equipo</h2>
+    </div>
+
+    <form>
+        <div class="row">
+            <h3 class="text-start">Detalles</h3>
+            <div class="col-md-6">
+                <div class="mb-3 row">
+                    <label for="class" class="col-sm-3 form-label">Clase: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="class" placeholder="01 Riesgo Bajo" readonly>
+                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class='bx bx-search bx-sm'></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="type" class="col-sm-3 form-label">Tipo: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="type" placeholder="01 Tipo X" readonly>
+                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class='bx bx-search bx-sm'></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="code" class="col-sm-3 form-label">Código: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="code" placeholder="01-01-0001" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="name" class="col-sm-3 form-label">Nombre: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="name" placeholder="Nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="brand" class="col-sm-3 form-label">Marca: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="brand" placeholder="Marca" readonly>
+                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class='bx bx-search bx-sm'></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="yearManufacture" class="col-sm-3 form-label">Año Fabricación: </label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" id="yearManufacture" placeholder="Año Fabricación"
+                               min="1900"
+                               max="2100">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="mb-3 row">
+                    <label for="model" class="col-sm-3 form-label">Modelo: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="model" placeholder="Modelo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="serialNumber" class="col-sm-3 form-label">Nro. Serie: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="serialNumber" placeholder="Nro. Serie">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="owner" class="col-sm-3 form-label">Propietario: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="owner" placeholder="Propietario" readonly>
+                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class='bx bx-search bx-sm'></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="area" class="col-sm-3 form-label">Área: </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="area" placeholder="Área" readonly>
+                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class='bx bx-search bx-sm'></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="status" class="col-sm-3 form-label">Estado:</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <select id="status" class="form-select">
+                                <option value="">Seleccione</option>
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="dateEntry" class="col-sm-3 form-label">Fecha Ingreso: </label>
+                    <div class="col-sm-9">
+                        <input type="date" class="form-control" id="dateEntry" placeholder="fecha Ingreso">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-start">Descripción</h3>
+                <div class="mb-3">
+                    <label for="description"></label>
+                    <textarea class="form-control" placeholder="Descripción" id="description"
+                              style="height: 100px"></textarea>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-start">Especificaciones</h3>
+                <div class="mb-3">
+                    <label for="specs"></label>
+                    <textarea class="form-control" placeholder="Especificaciones" id="specs"
+                              style="height: 100px"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h3 class="text-center">Imágenes</h3>
+            <div class="mb-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <input type="file" class="form-control mt-3 text-center" placeholder="Especificaciones" id="images"
+                           style="width: 130px;">
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="images-preview row">
+                        <div class="col-6 col-md-3 mb-2">
+                            <img class="img-fluid object-fit-cover" src="images/img.png" alt="Image"
+                                 style="height: 150px; width: 100%;">
+                        </div>
+                        <div class="col-6 col-md-3 mb-2">
+                            <img class="img-fluid object-fit-cover" src="images/img.png" alt="Image"
+                                 style="height: 150px; width: 100%;">
+                        </div>
+                        <div class="col-6 col-md-3 mb-2">
+                            <img class="img-fluid object-fit-cover" src="images/img.png" alt="Image"
+                                 style="height: 150px; width: 100%;">
+                        </div>
+                        <div class="col-6 col-md-3 mb-2">
+                            <img class="img-fluid object-fit-cover" src="images/img.png" alt="Image"
+                                 style="height: 150px; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+
+
+<!-- JavaScript -->
+<script src="js/script.js" type="application/javascript"></script>
+<script src="js/bootstrap.bundle.js" type="application/javascript"></script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Propietarios</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+                    <button class="new-btn btn">Nuevo</button>
+
+                    <div class="d-flex align-items-center">
+                        <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                               style="width: auto;">
+                        <button class="search-btn btn">Buscar</button>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered equipment-table mt-3">
+                        <thead>
+                        <tr>
+                            <th>Documento</th>
+                            <th>Tipo</th>
+                            <th>Nombre</th>
+                            <th>Fecha Inicio</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>00221122</td>
+                            <td>DNI</td>
+                            <td>Wilmer Ocampo</td>
+                            <td>12/12/2023</td>
+                            <td class="narrow-column">
+                                <i class="bx bx-edit-alt bx-md"></i>
+                            </td>
+                            <td class="narrow-column">
+                                <i class="bx bx-check-circle bx-md"></i>
+                            </td>
+                        </tr>
+                        <!-- Repite esta fila por cada equipo -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-2">
+                    <a class="page-item" href="#">Anterior</a>
+                    <a class="page-item page-item-active" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">Siguiente</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons-2.1.4/css/boxicons.css">
+    <link rel="stylesheet" href="css/tables.css">
+</head>
+<body>
+<div>
+    <main class="main-content">
+        <div class="breadcrumb text-muted">HOME / GESTIÓN DE EQUIPOS</div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Gestión de Equipos</h2>
+            <div class="table-filters d-flex flex-wrap justify-content-end">
+                <label class="me-2"><input type="radio" name="filter" checked> Equipo</label>
+                <label class="me-2"><input type="radio" name="filter"> Propietario</label>
+                <label class="me-2"><input type="radio" name="filter"> Área</label>
+                <label class="me-2"><input type="radio" name="filter"> Marca</label>
+                <label class="me-2"><input type="radio" name="filter"> Fecha Ingreso</label>
+            </div>
+        </div>
+
+        <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+            <button class="new-btn btn">Nuevo</button>
+
+            <!--<div class="d-flex align-items-center">
+                <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2" style="width: auto;">
+                <button class="search-btn btn">Buscar</button>
+            </div>-->
+
+            <div class="d-flex flex-column flex-md-row align-items-end justify-content-end mb-2">
+                <div class="col-auto d-flex align-items-center mb-2">
+                    <label class="me-2">Desde:</label>
+                    <input type="date" class="form-control" style="width: auto;">
+                </div>
+                <div class="col-auto d-flex align-items-center ms-2 mb-2">
+                    <label class="me-2">Hasta:</label>
+                    <input type="date" class="form-control" style="width: auto;">
+                </div>
+                <div class="col-auto">
+                    <button class="search-btn btn ms-2 mb-2">Buscar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered equipment-table">
+                <thead>
+                <tr>
+                    <th>EQUIPO</th>
+                    <th>PROPIETARIO</th>
+                    <th>ÁREA</th>
+                    <th>MARCA</th>
+                    <th>FECHA INGRESO</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="images/img.png" alt="Desfibrilador" class="equipment-image object-fit-cover me-4">
+                            <div>
+                                <strong>012345 | Desfibrilador</strong><br>
+                                Modelo: HeartStart XL+
+                            </div>
+                        </div>
+                    </td>
+                    <td>Dr. Wilmer Ocampo Quispe</td>
+                    <td>Emergencias</td>
+                    <td>Philips</td>
+                    <td class>12/12/2023</td>
+                    <td class="narrow-column">
+                        <div class="row">
+                            <i class="bx bx-edit-alt bx-md"></i>
+                            <i class="bx bx-low-vision bx-md"></i>
+                            <i class="bx bx-trash bx-md"></i>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Repite esta fila por cada equipo -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-end mt-2">
+            <a class="page-item" href="#">Anterior</a>
+            <a class="page-item page-item-active" href="#">1</a>
+            <a class="page-item" href="#">2</a>
+            <a class="page-item" href="#">3</a>
+            <a class="page-item" href="#">Siguiente</a>
+        </div>
+    </main>
+</div>
+
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

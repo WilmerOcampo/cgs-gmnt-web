@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+</head>
+<body>
+
+<nav th:fragment="navbar" class="navbar">
+    <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <a class="text-decoration-none" th:href="@{/}">CGS Consultores</a>
+    </div>
+
+    <div class="navbar_content">
+        <span>Wilmer Ocampo</span>
+        <img th:src="@{/images/profile.jpg}" alt="Profile"/>
+    </div>
+</nav>
+
+</body>
+</html>

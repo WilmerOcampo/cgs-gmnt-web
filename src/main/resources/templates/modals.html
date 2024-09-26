@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modales</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons-2.1.4/css/boxicons.css">
+    <link rel="stylesheet" href="css/tables.css">
+</head>
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Propietarios
+</button>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#brandModal">
+    Marcas
+</button>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#areaModal">
+    Áreas
+</button>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#classModal">
+    Clases
+</button>
+
+<!-- Modal Brand -->
+<div class="modal fade" id="brandModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5" id="">Marcas</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+                    <button class="new-btn btn" onclick="openSecondModal('#newBrandModal')">Nuevo</button>
+
+                    <div class="d-flex align-items-center">
+                        <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                               style="width: auto;">
+                        <button class="search-btn btn">Buscar</button>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered equipment-table mt-3">
+                        <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Marca</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>0022856</td>
+                            <td>Philips</td>
+                            <td class="narrow-column">
+                                <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#newBrandModal')"></i>
+                            </td>
+                            <td class="narrow-column">
+                                <i class="bx bx-check-circle bx-md"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-2">
+                    <a class="page-item" href="#">Anterior</a>
+                    <a class="page-item page-item-active" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">Siguiente</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal New Brand -->
+<div class="modal fade" id="newBrandModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Marca</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="brandCode" class="col-sm-3 form-label">Código: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="brandCode" placeholder="Código">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="brandName" class="col-sm-3 form-label">Marca: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="brandName" placeholder="Marca">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Owner -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Propietarios</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+                    <button class="new-btn btn" onclick="openSecondModal('#newOwnerModal')">Nuevo</button>
+
+                    <div class="d-flex align-items-center">
+                        <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                               style="width: auto;">
+                        <button class="search-btn btn">Buscar</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered equipment-table mt-3">
+                        <thead>
+                        <tr>
+                            <th>Documento</th>
+                            <th>Tipo</th>
+                            <th>Nombre</th>
+                            <th>Fecha Inicio</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>00221122</td>
+                            <td>DNI</td>
+                            <td>Wilmer Ocampo</td>
+                            <td>12/12/2023</td>
+                            <td class="narrow-column">
+                                <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#newOwnerModal')"></i>
+                            </td>
+                            <td class="narrow-column">
+                                <i class="bx bx-check-circle bx-md"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-2">
+                    <a class="page-item" href="#">Anterior</a>
+                    <a class="page-item page-item-active" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">Siguiente</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal New Owner -->
+<div class="modal fade" id="newOwnerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Propietario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label for="docType" class="col-sm-3 form-label">Tipo:</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <select id="docType" class="form-select">
+                                        <option value="">Seleccione</option>
+                                        <option value="dni">DNI</option>
+                                        <option value="ruc">RUC</option>
+                                        <option value="ce">CE</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="docNumber" class="col-sm-3 form-label">Nro. Documento: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="docNumber"
+                                           placeholder="Nro. Documento">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="paternalSurname" class="col-sm-3 form-label">Ape. Paterno: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="paternalSurname"
+                                           placeholder="Ape. Paterno">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="maternalSurname" class="col-sm-3 form-label">Ape. Materno: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="maternalSurname"
+                                           placeholder="Ape. Materno">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ownerName" class="col-sm-3 form-label">Nombres: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="ownerName" placeholder="Nombres">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ownerUbigeo" class="col-sm-3 form-label">Ubigeo: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="ownerUbigeo" placeholder="Ubigeo"
+                                           readonly>
+                                    <span class="input-group-text" onclick="openSecondModal('#ubigeoModal')">
+                                            <i class='bx bx-search bx-sm'></i>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ownerAddress" class="col-sm-3 form-label">Dirección: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="ownerAddress" placeholder="Dirección">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ownerPhone" class="col-sm-3 form-label">Nro. Teléfono: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="ownerPhone" placeholder="Nro. Teléfono">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ownerCell" class="col-sm-3 form-label">Nro. Celular: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="ownerCell" placeholder="Nro. Celular">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="ownerEmail" class="col-sm-3 form-label">Email: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="ownerEmail" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Ubigeo -->
+<div class="modal fade" id="ubigeoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Ubigeos</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="d-flex flex-md-row justify-content-end align-items-center mb-3">
+                    <div class="d-flex align-items-center">
+                        <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                               style="width: auto;">
+                        <button class="search-btn btn">Buscar</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered equipment-table mt-3">
+                        <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Distrito</th>
+                            <th>Provincia</th>
+                            <th>Departamento</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>012056</td>
+                            <td>Juan Luis Bustamante y Rivero</td>
+                            <td>Arequipa</td>
+                            <td>Arequipa</td>
+                            <td class="narrow-column">
+                                <i class="bx bx-check-circle bx-md"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-2">
+                    <a class="page-item" href="#">Anterior</a>
+                    <a class="page-item page-item-active" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">Siguiente</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Area -->
+<div class="modal fade" id="areaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Áreas</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+                    <button class="new-btn btn" onclick="openSecondModal('#newAreaModal')">Nuevo</button>
+
+                    <div class="d-flex align-items-center">
+                        <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                               style="width: auto;">
+                        <button class="search-btn btn">Buscar</button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered equipment-table mt-3">
+                        <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Área</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>0001001</td>
+                            <td>Laboratorio</td>
+                            <td>01/01/2024</td>
+                            <td>12/12/2024</td>
+                            <td class="narrow-column">
+                                <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#newAreaModal')"></i>
+                            </td>
+                            <td class="narrow-column">
+                                <i class="bx bx-check-circle bx-md" onclick="openSecondModal('#dateRangeModal')"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-2">
+                    <a class="page-item" href="#">Anterior</a>
+                    <a class="page-item page-item-active" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">Siguiente</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal New Area -->
+<div class="modal fade" id="newAreaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Área</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="areaCode" class="col-sm-3 form-label">Código: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="areaCode" placeholder="Código">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="areaName" class="col-sm-3 form-label">Área: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="areaName" placeholder="Área">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Range Date -->
+<div class="modal fade" id="dateRangeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Periodo de Fechas</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="areaCode2" class="col-sm-3 form-label">Código: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="areaCode2" placeholder="Código"
+                                       value="0101001" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="areaName2" class="col-sm-3 form-label">Área: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="areaName2" placeholder="Área"
+                                       value="Laboratorio" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <div class="col-auto d-flex align-items-center mb-2">
+                            <label class="me-2">Desde:</label>
+                            <input type="date" class="form-control" style="width: auto;">
+                        </div>
+                        <div class="col-auto d-flex align-items-center mb-2">
+                            <label class="me-2">Hasta:</label>
+                            <input type="date" class="form-control" style="width: auto;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Class -->
+<div class="modal fade" id="classModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Clases</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+                    <button class="new-btn btn" onclick="openSecondModal('#newClassModal')">Nuevo</button>
+
+                    <div class="d-flex align-items-center">
+                        <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                               style="width: auto;">
+                        <button class="search-btn btn">Buscar</button>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered equipment-table mt-3">
+                        <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Descripcón</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Xxxxxxxx</td>
+                            <td class="narrow-column">
+                                <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#newClassModal')"></i>
+                            </td>
+                            <td class="narrow-column">
+                                <i class="bx bx-check-circle bx-md"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-2">
+                    <a class="page-item" href="#">Anterior</a>
+                    <a class="page-item page-item-active" href="#">1</a>
+                    <a class="page-item" href="#">2</a>
+                    <a class="page-item" href="#">3</a>
+                    <a class="page-item" href="#">Siguiente</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal New Class -->
+<div class="modal fade" id="newClassModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5">Clase</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+
+                    <div class="col">
+                    <div class="mb-3 row">
+                        <label for="classCode" class="col-sm-3 form-label">Clase: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="classCode" placeholder="01">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="classDescription" class="col-sm-3 form-label">Descripción: </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="classDescription" placeholder="Descripción">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <h1 class="modal-title fs-5 mb-3">Tipos de la Clase</h1>
+                    <div class="d-flex flex-md-row justify-content-between align-items-center mb-1">
+                        <!--Este boton nuevo tiene que anadir un nuevo tr vacio dentro de body y se los input del tr anterior de ponen en readonly-->
+                        <button class="new-btn btn" id="addRow">Nueva Fila</button>
+
+                        <div class="d-flex align-items-center">
+                            <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                                   style="width: auto;">
+                            <button class="search-btn btn">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered equipment-table mt-3">
+                            <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descripcón</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody id="classTableBody">
+                            <tr>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="typeNumber" placeholder="01" required>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="typeDescription" placeholder="Aaaaaaaaa" required>
+                                    </div>
+                                </td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-edit-alt bx-md edit-btn pointer-event"></i>
+                                </td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-trash bx-md delete-btn pointer-event"></i>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+
+<!-- Keep both modals open (JQuery) -->
+<script>
+    function openSecondModal(id) {
+        $(document).ready(function () {
+            $(id).modal('show')
+        });
+    }
+
+    $(document).ready(function() {
+        // Añadir nueva fila al hacer clic en "Nuevo"
+        $('#addRow').click(function() {
+            if (areInputsComplete()) {
+                addNewRow();
+            } else {
+                alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
+            }
+        });
+
+        // Añadir nueva fila al presionar "Enter"
+        $('#classTableBody').on('keypress', 'input', function(e) {
+            if (e.which === 13) {
+                e.preventDefault(); // Evitar que se envíe el formulario
+                if (areInputsComplete()) {
+                    addNewRow();
+                } else {
+                    alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
+                }
+            }
+        });
+
+        // Verificar si los inputs de la última fila están completos
+        function areInputsComplete() {
+            return $('#classTableBody tr:last input').toArray().every(input => $(input).val());
+        }
+
+        // Añadir nueva fila
+        function addNewRow() {
+            // Desactivar los inputs de la fila anterior
+            $('#classTableBody tr:last input').prop('readonly', true);
+
+            // Crear nueva fila con inputs vacíos
+            const newRow = `
+            <tr>
+                <td><input type="number" class="form-control" placeholder="01" required></td>
+                <td><input type="text" class="form-control" placeholder="Descripción" required></td>
+                <td class="narrow-column">
+                    <i class="bx bx-edit-alt bx-md edit-btn" style="cursor:pointer;"></i>
+                </td>
+                <td class="narrow-column">
+                    <i class="bx bx-trash bx-md delete-btn" style="cursor:pointer;"></i>
+                </td>
+            </tr>`;
+
+            $('#classTableBody').append(newRow);
+        }
+
+        // Editar fila
+        $('#classTableBody').on('click', '.edit-btn', function() {
+            const row = $(this).closest('tr');
+            const inputs = row.find('input');
+
+            inputs.prop('readonly', !inputs.prop('readonly'));
+        });
+
+        // Eliminar fila
+        $('#classTableBody').on('click', '.delete-btn', function() {
+            $(this).closest('tr').remove();
+        });
+    });
+</script>
+</body>
+</html>
+
+
+

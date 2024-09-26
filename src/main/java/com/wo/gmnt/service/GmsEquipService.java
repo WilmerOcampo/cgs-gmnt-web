@@ -1,7 +1,5 @@
-package com.wo.gmnt.Service;
+package com.wo.gmnt.service;
 
-
-import java.util.List;
 
 public interface GmsEquipService {
 /*

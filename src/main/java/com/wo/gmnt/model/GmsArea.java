@@ -1,11 +1,15 @@
-package com.wo.gmnt.Model;
-import jakarta.persistence.*;
+package com.wo.gmnt.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "gms_areas")
-public class Gmsarea {
+public class GmsArea {
     @Id
     @Column(name = "id_are")
     private String idAre;

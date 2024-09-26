@@ -1,14 +1,7 @@
-package com.wo.gmnt.ServiceImpl;
+package com.wo.gmnt.serviceImpl;
 
 
-import com.wo.gmnt.Repository.*;
-import com.wo.gmnt.Service.GmsEquipService;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class GmsEquipServiceImpl {

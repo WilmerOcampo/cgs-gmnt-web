@@ -1,44 +1,38 @@
-package com.wo.gmnt.Model;
+package com.wo.gmnt.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "gms_hareas")
-public class GmsHareas {
+@Table(name = "gms_hprop")
+public class GmsHProp {
     @Id
-    @Column(name = "id_har")
-    private String idHar;
+    @Column(name = "id_hpr")
+    private String idHpr;
 
     @ManyToOne
     @JoinColumn(name = "id_eqp")
     private GmsEquip gmsEquip;
 
-    @ManyToOne
-    @JoinColumn(name = "id_are")
-    private Gmsarea gmsArea;
-
     @Column(name = "codeqp")
     private String codeqp;
 
-    @Column(name = "codare")
-    private String codare;
+    @ManyToOne
+    @JoinColumn(name = "id_pro")
+    private com.wo.gmnt.Model.GmsProp gmsProp;
 
     @Column(name = "numitm")
     private String numitm;
 
-    @Column(name = "fch_in")
-    private java.sql.Date fchIn;
+    @Column(name = "fchhis")
+    private java.sql.Date fchhis;
 
-    @Column(name = "fch_fi")
-    private java.sql.Date fchFi;
+    @Column(name = "fchmov")
+    private String fchmov;
 
-    @Column(name = "fchini")
-    private String fchini;
-
-    @Column(name = "fchfin")
-    private String fchfin;
+    @Column(name = "id_con")
+    private String idCon;
 
     @Column(name = "usrcre")
     private String usrcre;

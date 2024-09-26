@@ -40,3 +40,76 @@ if (window.innerWidth < 768) {
 } else {
   sidebar.classList.remove("close");
 }
+
+
+/* Modals */
+
+/* Keep both modals open (JQuery) */
+function openSecondModal(id) {
+  $(document).ready(function () {
+    $(id).modal('show')
+  });
+}
+
+/* Modal Class */
+$(document).ready(function() {
+  // Añadir nueva fila al hacer clic en "Nuevo"
+  $('#addRow').click(function() {
+    if (areInputsComplete()) {
+      addNewRow();
+    } else {
+      alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
+    }
+  });
+
+  // Añadir nueva fila al presionar "Enter"
+  $('#classTableBody').on('keypress', 'input', function(e) {
+    if (e.which === 13) {
+      e.preventDefault(); // Evitar que se envíe el formulario
+      if (areInputsComplete()) {
+        addNewRow();
+      } else {
+        alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
+      }
+    }
+  });
+
+  // Verificar si los inputs de la última fila están completos
+  function areInputsComplete() {
+    return $('#classTableBody tr:last input').toArray().every(input => $(input).val());
+  }
+
+  // Añadir nueva fila
+  function addNewRow() {
+    // Desactivar los inputs de la fila anterior
+    $('#classTableBody tr:last input').prop('readonly', true);
+
+    // Crear nueva fila con inputs vacíos
+    const newRow = `
+            <tr>
+                <td><input type="number" class="form-control" placeholder="01" required></td>
+                <td><input type="text" class="form-control" placeholder="Descripción" required></td>
+                <td class="narrow-column">
+                    <i class="bx bx-edit-alt bx-md edit-btn" style="cursor:pointer;"></i>
+                </td>
+                <td class="narrow-column">
+                    <i class="bx bx-trash bx-md delete-btn" style="cursor:pointer;"></i>
+                </td>
+            </tr>`;
+
+    $('#classTableBody').append(newRow);
+  }
+
+  // Editar fila
+  $('#classTableBody').on('click', '.edit-btn', function() {
+    const row = $(this).closest('tr');
+    const inputs = row.find('input');
+
+    inputs.prop('readonly', !inputs.prop('readonly'));
+  });
+
+  // Eliminar fila
+  $('#classTableBody').on('click', '.delete-btn', function() {
+    $(this).closest('tr').remove();
+  });
+});

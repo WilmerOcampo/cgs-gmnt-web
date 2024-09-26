@@ -1,0 +1,66 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Modal Types -->
+    <div th:fragment="typesModal" class="modal fade" id="typesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h1 class="modal-title fs-5">Tipos - Clase 01</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex flex-md-row justify-content-between align-items-center mb-3">
+                        <button class="new-btn btn" onclick="openSecondModal('#classModal')">Nuevo</button>
+
+                        <div class="d-flex align-items-center">
+                            <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                                   style="width: auto;">
+                            <button class="search-btn btn">Buscar</button>
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered equipment-table mt-3">
+                            <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Tipo</th>
+                                <th>Descripcón</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>01</td>
+                                <td>Aaaaaaaaa</td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#classModal')"></i>
+                                </td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-check-circle bx-md"></i>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-2">
+                        <a class="page-item" href="#">Anterior</a>
+                        <a class="page-item page-item-active" href="#">1</a>
+                        <a class="page-item" href="#">2</a>
+                        <a class="page-item" href="#">3</a>
+                        <a class="page-item" href="#">Siguiente</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

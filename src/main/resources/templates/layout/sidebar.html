@@ -12,7 +12,7 @@
 
             <div class="user-info">
                 <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Profile">
+                    <img th:src="@{/images/profile.jpg}" alt="Profile">
                 </div>
                 <span>Wilmer Ocampo</span>
                 <span><strong>ADMIN</strong></span>
@@ -23,7 +23,7 @@
                 <i class="bx bx-chevron-right arrow-left"></i>
             </div>
             <div class="menu_items submenu">
-                <a href="#" class="nav_link sublink">Equipos</a>
+                <a th:href="@{/}" class="nav_link sublink">Equipos</a>
                 <a href="#" class="nav_link sublink">Clasificación de Equipos</a>
                 <a href="#" class="nav_link sublink">Clasificación de Equipos</a>
                 <a href="#" class="nav_link sublink">Propietarios</a>

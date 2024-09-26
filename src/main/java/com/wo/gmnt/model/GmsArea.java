@@ -1,5 +1,7 @@
 package com.wo.gmnt.model;
+
 import jakarta.persistence.*;
+
 import lombok.Data;
 
 @Data

@@ -1,10 +1,34 @@
 package com.wo.gmnt.serviceImpl;
 
 
+import com.wo.gmnt.model.GmsEquip;
+import com.wo.gmnt.service.GmsEquipService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
-public class GmsEquipServiceImpl {
+public class GmsEquipServiceImpl implements GmsEquipService {
+    @Override
+    public List<GmsEquip> findAll() {
+        return List.of();
+    }
+
+    @Override
+    public Optional<GmsEquip> findById(String idEqp) {
+        return Optional.empty();
+    }
+
+    @Override
+    public GmsEquip save(GmsEquip equip) {
+        return null;
+    }
+
+    @Override
+    public Boolean deleteById(String idEqp) {
+        return null;
+    }
   /*  @Autowired
     private GmsEquipRepository equipRepository;
 

@@ -1,0 +1,40 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Modal Brand -->
+    <div th:fragment="brandModal" class="modal fade" id="brandModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h1 class="modal-title fs-5">Marca</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="mb-3 row">
+                            <label for="brandCode" class="col-sm-3 form-label">Código: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="brandCode" placeholder="Código">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="brandName" class="col-sm-3 form-label">Marca: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="brandName" placeholder="Marca">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,90 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+    <!-- Modal Class -->
+    <div th:fragment="classModal" class="modal fade" id="classModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h1 class="modal-title fs-5">Clase</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="col">
+                        <div class="mb-3 row">
+                            <label for="classCode" class="col-sm-3 form-label">Clase: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="classCode" placeholder="01">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="classDescription" class="col-sm-3 form-label">Descripción: </label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="classDescription"
+                                           placeholder="Descripción">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1 class="modal-title fs-5 mb-3">Tipos de la Clase</h1>
+                    <div class="d-flex flex-md-row justify-content-between align-items-center mb-1">
+                        <!--Este boton nuevo tiene que anadir un nuevo tr vacio dentro de body y se los input del tr anterior de ponen en readonly-->
+                        <button class="new-btn btn" id="addRow">Nueva Fila</button>
+
+                        <div class="d-flex align-items-center">
+                            <input type="text" placeholder="Ingrese su búsqueda" class="form-control me-2"
+                                   style="width: auto;">
+                            <button class="search-btn btn">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered equipment-table mt-3">
+                            <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descripcón</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody id="classTableBody">
+                            <tr>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="typeNumber" placeholder="01"
+                                               required>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="typeDescription"
+                                               placeholder="Aaaaaaaaa" required>
+                                    </div>
+                                </td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-edit-alt bx-md edit-btn pointer-event"></i>
+                                </td>
+                                <td class="narrow-column">
+                                    <i class="bx bx-trash bx-md delete-btn pointer-event"></i>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

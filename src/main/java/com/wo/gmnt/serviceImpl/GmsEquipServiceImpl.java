@@ -7,6 +7,8 @@ import com.wo.gmnt.service.GmsEquipService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +29,16 @@ public class GmsEquipServiceImpl implements GmsEquipService {
 
     @Override
     public GmsEquip save(GmsEquip equip) {
+        if (equip.getIdEqp() == null) {
+            equip.setFchcre(getDate());
+            equip.setHracre(getTime());
+        } else {
+            equip.setFchmod(getDate());
+            equip.setHramod(getTime());
+        }
+        String latestId = gmsEquipRepository.findLatestId();
+        String idEqp = generateIdEqp(latestId);
+        equip.setIdEqp(idEqp);
         return gmsEquipRepository.save(equip);
     }
 
@@ -142,4 +154,22 @@ public class GmsEquipServiceImpl implements GmsEquipService {
     }
 
    */
+  private String generateIdEqp(String latestId) {
+      if (latestId == null) {
+          return "EQP001";
+      }
+      int c = Integer.parseInt(latestId.substring(3));
+      c++;
+      return String.format("EQP%03d", c);
+  }
+
+  private String getDate() {
+      SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+      return dateFormat.format(new Date());
+  }
+
+    private String getTime() {
+        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+        return timeFormat.format(new Date());
+    }
 }

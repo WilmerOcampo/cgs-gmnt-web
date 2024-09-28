@@ -3,6 +3,8 @@ package com.wo.gmnt.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Data
 @Entity
 @Table(name = "gms_equip")
@@ -14,21 +16,22 @@ public class GmsEquip {
     @Column(name = "codeqp")
     private String codeqp;
 
+    /***/
     @Column(name = "codcla")
     private String codcla;
-
+    /***/
     @Column(name = "codtcl")
     private String codtcl;
-
+    /***/
     @Column(name = "codmar")
     private String codmar;
 
     @ManyToOne
-    @JoinColumn(name = "id_pro")
+    @JoinColumn(name = "codpro")
     private GmsProp gmsProp;
 
     @ManyToOne
-    @JoinColumn(name = "id_are")
+    @JoinColumn(name = "codare")
     private GmsArea gmsArea;
 
     @Column(name = "nomeqp")
@@ -44,7 +47,7 @@ public class GmsEquip {
     private String anofab;
 
     @Column(name = "fchieq")
-    private java.sql.Date fchieq;
+    private LocalDate fchieq;
 
     @Column(name = "fching")
     private String fching;
@@ -61,6 +64,7 @@ public class GmsEquip {
     @Column(name = "codimg")
     private String codimg;
 
+    /***/
     @Column(name = "usrcre")
     private String usrcre;
 

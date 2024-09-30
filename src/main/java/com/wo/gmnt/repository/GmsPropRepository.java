@@ -8,6 +8,9 @@ import java.util.Optional;
 
 public interface GmsPropRepository extends JpaRepository<GmsProp, String> {
 
+    @Query("SELECT MAX(e.idEqp) FROM GmsEquip e")
+    String findLatestId();
+
     @Query("SELECT SUBSTR(TRIM(p.apppro) || ' ' || TRIM(p.apmpro) || ' ' || TRIM(p.nompro), 1, 30) AS sigpro FROM GmsProp p WHERE p.idPro = ?1")
     Optional<String> findSigProById(String idPro);
 

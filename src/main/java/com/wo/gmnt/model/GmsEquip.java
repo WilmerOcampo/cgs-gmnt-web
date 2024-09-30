@@ -27,11 +27,11 @@ public class GmsEquip {
     private String codmar;
 
     @ManyToOne
-    @JoinColumn(name = "codpro")
+    @JoinColumn(name = "id_pro")
     private GmsProp gmsProp;
 
     @ManyToOne
-    @JoinColumn(name = "codare")
+    @JoinColumn(name = "id_are")
     private GmsArea gmsArea;
 
     @Column(name = "nomeqp")

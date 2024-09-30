@@ -34,7 +34,8 @@
                     <label for="codcla" class="col-sm-3 form-label">Clase: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="codcla" name="codcla" placeholder="01 Riesgo Bajo" th:field="*{codcla}" readonly>
+                            <input type="text" class="form-control" id="codcla" name="codcla"
+                                   placeholder="01 Riesgo Bajo" th:field="*{codcla}" readonly>
                             <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#classesModal">
                         <i class='bx bx-search bx-sm'></i>
                     </span>
@@ -46,7 +47,8 @@
                     <label for="codtcl" class="col-sm-3 form-label">Tipo: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="codtcl" name="codtcl" placeholder="01 Tipo X" th:field="*{codtcl}" readonly>
+                            <input type="text" class="form-control" id="codtcl" name="codtcl" placeholder="01 Tipo X"
+                                   th:field="*{codtcl}" readonly>
                             <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#typesModal">
                         <i class='bx bx-search bx-sm'></i>
                     </span>
@@ -58,7 +60,8 @@
                     <label for="codeqp" class="col-sm-3 form-label">Código: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="codeqp" name="codeqp" placeholder="01-01-0001" th:field="*{codeqp}" readonly>
+                            <input type="text" class="form-control" id="codeqp" name="codeqp" placeholder="01-01-0001"
+                                   th:field="*{codeqp}" readonly>
                         </div>
                     </div>
                 </div>
@@ -67,7 +70,8 @@
                     <label for="nomeqp" class="col-sm-3 form-label">Nombre: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="nomeqp" name="nomeqp" placeholder="Nombre" th:field="*{nomeqp}">
+                            <input type="text" class="form-control" id="nomeqp" name="nomeqp" placeholder="Nombre"
+                                   th:field="*{nomeqp}">
                         </div>
                     </div>
                 </div>
@@ -76,7 +80,8 @@
                     <label for="codmar" class="col-sm-3 form-label">Marca: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="codmar" name="codmar" placeholder="Marca" th:field="*{codmar}" readonly>
+                            <input type="text" class="form-control" id="codmar" name="codmar" placeholder="Marca"
+                                   th:field="*{codmar}" readonly>
                             <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#brandsModal">
                         <i class='bx bx-search bx-sm'></i>
                     </span>
@@ -87,7 +92,8 @@
                 <div class="mb-3 row">
                     <label for="anofab" class="col-sm-3 form-label">Año Fabricación: </label>
                     <div class="col-sm-9">
-                        <input type="number" class="form-control" id="anofab" name="anofab" placeholder="Año Fabricación"
+                        <input type="number" class="form-control" id="anofab" name="anofab"
+                               placeholder="Año Fabricación"
                                min="1900"
                                max="2100" th:field="*{anofab}">
                     </div>
@@ -100,7 +106,8 @@
                     <label for="modeqp" class="col-sm-3 form-label">Modelo: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="modeqp" name="modeqp" placeholder="Modelo" th:field="*{modeqp}">
+                            <input type="text" class="form-control" id="modeqp" name="modeqp" placeholder="Modelo"
+                                   th:field="*{modeqp}">
                         </div>
                     </div>
                 </div>
@@ -109,17 +116,20 @@
                     <label for="nsreqp" class="col-sm-3 form-label">Nro. Serie: </label>
                     <div class="col-sm-9">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="nsreqp" name="nsreqp" placeholder="Nro. Serie" th:field="*{nsreqp}">
+                            <input type="text" class="form-control" id="nsreqp" name="nsreqp" placeholder="Nro. Serie"
+                                   th:field="*{nsreqp}">
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-3 row">
-                    <label for="gmsProp" class="col-sm-3 form-label">Propietario: </label>
+                    <label for="nameOwner" class="col-sm-3 form-label">Propietario: </label>
                     <div class="col-sm-9">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="gmsProp" name="gmsProp" placeholder="Propietario" th:field="*{gmsProp}" readonly>
-                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#ownersModal">
+                        <div class="input-group" data-bs-toggle="modal" data-bs-target="#ownersModal">
+                            <input type="hidden" id="idPro" name="idPro">
+                            <input type="text" class="form-control" id="nameOwner" name="nameOwner"
+                                   placeholder="Propietario" readonly>
+                            <span class="input-group-text">
                         <i class='bx bx-search bx-sm'></i>
                     </span>
                         </div>
@@ -127,11 +137,12 @@
                 </div>
 
                 <div class="mb-3 row">
-                    <label for="gmsArea" class="col-sm-3 form-label">Área: </label>
+                    <label for="nameArea" class="col-sm-3 form-label">Área: </label>
                     <div class="col-sm-9">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="gmsArea" name="gmsArea" placeholder="Área" th:field="*{gmsArea}" readonly>
-                            <span class="input-group-text" data-bs-toggle="modal" data-bs-target="#areasModal">
+                        <div class="input-group" data-bs-toggle="modal" data-bs-target="#areasModal">
+                            <input type="hidden" id="idArea" name="idArea">
+                            <input type="text" class="form-control" id="nameArea" name="nameArea" placeholder="Área" readonly>
+                            <span class="input-group-text">
                         <i class='bx bx-search bx-sm'></i>
                     </span>
                         </div>
@@ -154,7 +165,8 @@
                 <div class="mb-3 row">
                     <label for="fchieq" class="col-sm-3 form-label">Fecha Ingreso: </label>
                     <div class="col-sm-9">
-                        <input type="date" class="form-control" id="fchieq" name="fchieq" placeholder="fecha Ingreso" th:field="*{fchieq}">
+                        <input type="date" class="form-control" id="fchieq" name="fchieq" placeholder="fecha Ingreso"
+                               th:field="*{fchieq}">
                     </div>
                 </div>
 
@@ -232,6 +244,113 @@
 <script th:src="@{/bootstrap/js/bootstrap.js}" type="text/javascript"></script>
 <script th:src="@{/jquery/jquery.js}" type="text/javascript"></script>
 <script th:src="@{/js/script.js}" type="text/javascript"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ownersModal = document.getElementById('ownersModal');
+        ownersModal.addEventListener('show.bs.modal', fetchOwners);
+    });
+
+    // Obtener props
+    const fetchOwners = async () => {
+        try {
+            const response = await fetch('/owner/all');
+            const data = await response.json();
+            populateTable(data);
+        } catch (error) {
+            console.error('Error al obtener propietarios:', error);
+        }
+    };
+
+    // Rellenar tbody
+    const populateTable = (owners) => {
+        const tbody = document.querySelector('#ownersTBody');
+        tbody.innerHTML = ''; // Limpiar tabla
+        owners.forEach(owner => {
+            const row = createOwnerRow(owner);
+            tbody.appendChild(row);
+        });
+    };
+
+    // Crear fila de tbody
+    const createOwnerRow = (owner) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+        <td>${owner.nrodid}</td>
+        <td>${owner.tdipro}</td>
+        <td>${owner.sigpro}</td>
+        <td>${owner.fchcre}</td>
+        <td class="narrow-column">
+            <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#ownerModal')"></i>
+        </td>
+        <td class="narrow-column">
+            <i class="bx bx-check-circle bx-md" onclick="selectOwner('${encodeURIComponent(JSON.stringify(owner))}')"></i>
+        </td>`;
+        return row;
+    };
+
+    // Seleccionar un propietario
+    function selectOwner(dataProp) {
+        const prop = JSON.parse(decodeURIComponent(dataProp));
+        document.getElementById('idPro').value = prop.idPro;
+        document.getElementById('nameOwner').value = `${prop.sigpro} ${prop.nompro} ${prop.apppro} ${prop.apmpro}`;
+        $('#ownersModal').modal('hide');
+    }
+
+    //***************************************/
+    document.addEventListener('DOMContentLoaded', () => {
+        const areasModal = document.getElementById('areasModal');
+        areasModal.addEventListener('show.bs.modal', fetchAreas);
+    });
+
+    const fetchAreas = async () => {
+        try {
+            const response = await fetch('/area/all');
+            const data = await response.json();
+            populateArea(data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    const populateArea = (areas) => {
+        const tbody = document.querySelector('#areasTBody');
+        tbody.innerHTML = '';
+        areas.forEach(area => {
+            const row = createAreaRow(area);
+            tbody.appendChild(row);
+        });
+    };
+
+    // Crear fila de tbody
+    const createAreaRow = (area) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+        <td>${area.codare}</td>
+        <td>${area.desare}</td>
+        <td class="narrow-column">
+            <i class="bx bx-edit-alt bx-md" onclick="openSecondModal('#areaModal')"></i>
+         </td>
+         <td class="narrow-column">
+            <i class="bx bx-check-circle bx-md" onclick="selectArea('${encodeURIComponent(JSON.stringify(area))}')"></i>
+        </td>`;
+        return row;
+    };
+
+    // Seleccionar area
+    function selectArea(areaData) {
+        const area = JSON.parse(decodeURIComponent(areaData));
+        console.log("GMSSSS: ", area);
+
+        document.getElementById('idArea').value = area.idAre;
+        document.getElementById('nameArea').value = area.desare;
+
+        // Modal data-range
+        document.getElementById('areaCode2').value = area.codare;
+        document.getElementById('areaName2').value = area.desare;
+        openSecondModal('#dateRangeModal');
+    }
+</script>
 
 </body>
 </html>

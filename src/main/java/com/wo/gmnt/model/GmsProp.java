@@ -9,7 +9,7 @@ import lombok.Data;
 @Table(name = "gms_prop")
 public class GmsProp {
     @Id
-    @Column(name = "id_pro")
+    @Column(name = "id_pro", length = 255)
     private String idPro;
 
     @Column(name = "codpro")

@@ -3,9 +3,9 @@ spring:
     name: cgs-gmnt-web
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/cgs_gmnt
+    url: jdbc:postgresql://localhost:5432/DBGMS
     username: postgres
-    password: root
+    password: sql
   jpa:
     hibernate:
       ddl-auto: update

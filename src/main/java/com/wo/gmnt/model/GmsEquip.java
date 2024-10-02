@@ -3,6 +3,8 @@ package com.wo.gmnt.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "gms_equip")
@@ -36,6 +38,8 @@ public class GmsEquip {
 
     @Column(name = "modeqp")
     private String modeqp;
+
+
 
     @Column(name = "nsreqp")
     private String nsreqp;

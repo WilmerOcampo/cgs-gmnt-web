@@ -70,20 +70,20 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr th:each="equip : ${equips}">
                 <td>
                     <div class="d-flex align-items-center">
-                        <img src="images/img.png" alt="Desfibrilador" class="equipment-image object-fit-cover me-4">
+                        <img th:src="@{/images/img.png}" alt="Desfibrilador" class="equipment-image object-fit-cover me-4">
                         <div>
-                            <strong>012345 | Desfibrilador</strong><br>
-                            Modelo: HeartStart XL+
+                            <strong><span th:text="${equip.idEqp}"></span> | <span th:text="${equip.nomeqp}"></span></strong><br>
+                            Modelo: <span th:text="${equip.modeqp}"></span><!-- HeartStart XL+-->
                         </div>
                     </div>
                 </td>
-                <td>Dr. Wilmer Ocampo Quispe</td>
-                <td>Emergencias</td>
-                <td>Philips</td>
-                <td class>12/12/2023</td>
+                <td th:text="${equip.gmsProp.nompro + ' ' + equip.gmsProp.apmpro + ' ' + equip.gmsProp.apmpro}"><!--Dr. Wilmer Ocampo Quispe--></td>
+                <td th:text="${equip.gmsArea.desare}"><!--Emergencias--></td>
+                <td th:text="${equip.idMar}"><!--Philips--></td>
+                <td th:text="${equip.fchieq}"><!--12/12/2023--></td>
                 <td class="narrow-column">
                     <div class="row">
                         <i class="bx bx-edit-alt bx-md"></i>

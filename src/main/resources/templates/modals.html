@@ -43,76 +43,73 @@
 <script th:src="@{/js/script.js}" type="text/javascript"></script>
 
 <script>
-   /* function openSecondModal(id) {
-        $(document).ready(function () {
-            $(id).modal('show')
-        });
-    }
+    /* function openSecondModal(id) {
+         $(document).ready(function () {
+             $(id).modal('show')
+         });
+     }
 
-    $(document).ready(function() {
-        // Añadir nueva fila al hacer clic en "Nuevo"
-        $('#addRow').click(function() {
-            if (areInputsComplete()) {
-                addNewRow();
-            } else {
-                alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
-            }
-        });
+     $(document).ready(function() {
+         // Añadir nueva fila al hacer clic en "Nuevo"
+         $('#addRow').click(function() {
+             if (areInputsComplete()) {
+                 addNewRow();
+             } else {
+                 alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
+             }
+         });
 
-        // Añadir nueva fila al presionar "Enter"
-        $('#classTableBody').on('keypress', 'input', function(e) {
-            if (e.which === 13) {
-                e.preventDefault(); // Evitar que se envíe el formulario
-                if (areInputsComplete()) {
-                    addNewRow();
-                } else {
-                    alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
-                }
-            }
-        });
+         // Añadir nueva fila al presionar "Enter"
+         $('#classTableBody').on('keypress', 'input', function(e) {
+             if (e.which === 13) {
+                 e.preventDefault(); // Evitar que se envíe el formulario
+                 if (areInputsComplete()) {
+                     addNewRow();
+                 } else {
+                     alert("Por favor, complete todos los campos antes de añadir una nueva fila.");
+                 }
+             }
+         });
 
-        // Verificar si los inputs de la última fila están completos
-        function areInputsComplete() {
-            return $('#classTableBody tr:last input').toArray().every(input => $(input).val());
-        }
+         // Verificar si los inputs de la última fila están completos
+         function areInputsComplete() {
+             return $('#classTableBody tr:last input').toArray().every(input => $(input).val());
+         }
 
-        // Añadir nueva fila
-        function addNewRow() {
-            // Desactivar los inputs de la fila anterior
-            $('#classTableBody tr:last input').prop('readonly', true);
+         // Añadir nueva fila
+         function addNewRow() {
+             // Desactivar los inputs de la fila anterior
+             $('#classTableBody tr:last input').prop('readonly', true);
 
-            // Crear nueva fila con inputs vacíos
-            const newRow = `
-            <tr>
-                <td><input type="number" class="form-control" placeholder="01" required></td>
-                <td><input type="text" class="form-control" placeholder="Descripción" required></td>
-                <td class="narrow-column">
-                    <i class="bx bx-edit-alt bx-md edit-btn" style="cursor:pointer;"></i>
-                </td>
-                <td class="narrow-column">
-                    <i class="bx bx-trash bx-md delete-btn" style="cursor:pointer;"></i>
-                </td>
-            </tr>`;
+             // Crear nueva fila con inputs vacíos
+             const newRow = `
+             <tr>
+                 <td><input type="number" class="form-control" placeholder="01" required></td>
+                 <td><input type="text" class="form-control" placeholder="Descripción" required></td>
+                 <td class="narrow-column">
+                     <i class="bx bx-edit-alt bx-md edit-btn" style="cursor:pointer;"></i>
+                 </td>
+                 <td class="narrow-column">
+                     <i class="bx bx-trash bx-md delete-btn" style="cursor:pointer;"></i>
+                 </td>
+             </tr>`;
 
-            $('#classTableBody').append(newRow);
-        }
+             $('#classTableBody').append(newRow);
+         }
 
-        // Editar fila
-        $('#classTableBody').on('click', '.edit-btn', function() {
-            const row = $(this).closest('tr');
-            const inputs = row.find('input');
+         // Editar fila
+         $('#classTableBody').on('click', '.edit-btn', function() {
+             const row = $(this).closest('tr');
+             const inputs = row.find('input');
 
-            inputs.prop('readonly', !inputs.prop('readonly'));
-        });
+             inputs.prop('readonly', !inputs.prop('readonly'));
+         });
 
-        // Eliminar fila
-        $('#classTableBody').on('click', '.delete-btn', function() {
-            $(this).closest('tr').remove();
-        });
-    });*/
+         // Eliminar fila
+         $('#classTableBody').on('click', '.delete-btn', function() {
+             $(this).closest('tr').remove();
+         });
+     });*/
 </script>
 </body>
 </html>
-
-
-

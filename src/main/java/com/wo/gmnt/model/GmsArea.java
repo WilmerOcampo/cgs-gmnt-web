@@ -3,13 +3,15 @@ package com.wo.gmnt.model;
 import jakarta.persistence.*;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 @Data
 @Entity
 @Table(name = "gms_areas")
 public class GmsArea {
     @Id
-    @Column(name = "id_are")
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String idAre;
 
     @Column(name = "codare")

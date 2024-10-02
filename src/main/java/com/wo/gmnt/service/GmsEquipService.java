@@ -1,32 +1,21 @@
 package com.wo.gmnt.service;
 
 
+import com.wo.gmnt.model.GmsEquip;
+
+import java.util.List;
+import java.util.Optional;
+
 public interface GmsEquipService {
-/*
-    GmsEquip createEquipment(GmsEquip equip);
+    List<GmsEquip> findAll();
 
-    GmsEquip updateEquipment(String id, GmsEquip equip);
+    Optional<GmsEquip> findById(String idEqp);
 
-    GmsEquip getEquipmentById(String id);
+    GmsEquip save(GmsEquip equip);
 
-    List<GmsEquip> getAllEquipment();
-
-    void deleteEquipmentById(String id);
-
-    // Para los dropdowns
-    List<Gmsprop> getAllOwners();
-
-    List<Gmsarea> getAllAreas();
-
-    // Asignación de propietarios y áreas
-    void assignOwnerToEquipment(String equipmentId, String ownerId);
-
-    void assignAreaToEquipment(String equipmentId, String areaId);
-
-    // Obtener el historial
-    List<Gmsprop> getEquipmentOwnerHistory(String equipmentId);
-
-    List<Gmsarea> getEquipmentAreaHistory(String equipmentId);
-
- */
+    void deleteById(String idEqp);
 }
+
+
+
+
